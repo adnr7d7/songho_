@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://naruto.dev/static/site-assets/images/share-ais-513315318.png" />
+<img width="1200" height="475" alt="GHBanner" src="https://www.thoughtco.com/link-an-image-on-your-website-3468291" />
 </div>
 
 # Run and deploy your AI Studio app
