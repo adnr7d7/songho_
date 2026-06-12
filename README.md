@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://www.thoughtco.com/link-an-image-on-your-website-3468291" />
+<img width="1200" height="475" alt="GHBanner" src="" />
 </div>
 
 # Run and deploy your AI Studio app
