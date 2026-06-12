@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel Decorative", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  
+  --color-african-wood: #6B3F1D;
+  --color-african-dark: #3A2314;
+  --color-emerald-accent: #00FF9D;
+  --color-abyss: #060609;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-african-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-600);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-400);
+}
+
+/* Wood Textures and Carving Effects */
+.bg-wood-pattern {
+  background-color: #120b06;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(58, 35, 20, 0.4) 0%, rgba(18, 11, 6, 0.95) 85%),
+    repeating-linear-gradient(45deg, rgba(107, 63, 29, 0.05) 0px, rgba(107, 63, 29, 0.05) 5px, rgba(58, 35, 20, 0.05) 5px, rgba(58, 35, 20, 0.05) 10px);
+}
+
+.wood-board {
+  background: linear-gradient(135deg, #4A2B15 0%, #201006 100%);
+  box-shadow: 
+    inset 0 4px 20px rgba(0,0,0,0.8),
+    0 10px 40px rgba(0,0,0,0.9),
+    inset 0 -4px 10px rgba(107, 63, 29, 0.4);
+}
+
+.wood-pit {
+  background: radial-gradient(circle at center, #150903 0%, #2D170B 80%, #3D2010 100%);
+  box-shadow: 
+    inset 0 10px 15px rgba(0, 0, 0, 0.95),
+    inset 0 -3px 5px rgba(255, 215, 0, 0.1),
+    0 4px 6px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.wood-pit:not(.empty-pit):hover {
+  box-shadow: 
+    inset 0 10px 15px rgba(0, 0, 0, 0.95),
+    0 0 12px rgba(255, 215, 0, 0.45);
+}
+
+.gold-metallic-border {
+  border: 1px solid;
+  border-image: linear-gradient(to right, #78350f, #f59e0b, #92400e, #fbbf24, #78350f) 1;
+}
+
+.gold-text-glow {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.emerald-text-glow {
+  text-shadow: 0 0 8px rgba(0, 255, 157, 0.6);
+}
+
+/* Bead Glow styling */
+.glass-bead {
+  background: radial-gradient(circle at 35% 35%, #92400e 0%, #3a1c02 65%, #150903 100%);
+  box-shadow: 
+    1px 2px 3px rgba(0,0,0,0.95),
+    inset -1px -1px 3px rgba(0,0,0,0.8),
+    inset 1px 1px 2px rgba(255,215,0,0.25);
+}
+
+.glass-bead-selected {
+  background: radial-gradient(circle at 35% 35%, #00FF9D 0%, #00875a 65%, #01291b 100%) !important;
+  box-shadow: 
+    0 0 6px #00FF9D,
+    1px 1px 2px rgba(0,0,0,0.9),
+    inset 1px 1px 2px rgba(255,255,255,0.4) !important;
+}
+
+.glass-bead-captured {
+  background: radial-gradient(circle at 35% 35%, #ef4444 0%, #7f1d1d 65%, #450a0a 100%) !important;
+  box-shadow: 
+    0 0 8px #ef4444,
+    1px 1px 2px rgba(0,0,0,0.9) !important;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    border-color: rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.85);
+    border-color: rgba(255, 215, 0, 0.95);
+  }
+}
+
+.active-pit-highlight {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.float-wisdom {
+  animation: float 4s ease-in-out infinite;
+}
+

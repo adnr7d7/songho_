@@ -1,0 +1,6 @@
+{
+  "name": "SONGhO Championship",
+  "description": "Un jeu de stratégie traditionnel africain Songo haut de gamme, avec mode solo IA, multijoueur local, salon en ligne et assistance interactive du Sage Ekang.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
